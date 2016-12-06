@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6546f82a-d3de-4dc8-b78c-0725ebf7da56" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Web_Pages/BuyTicket.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BusSystem.iws" />
@@ -23,21 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Web_Pages/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuyTicket.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Web_Pages/BuyTicket.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -203,7 +194,7 @@
       <updated>1481040143599</updated>
       <workItem from="1481040148026" duration="1934000" />
       <workItem from="1481042165404" duration="1402000" />
-      <workItem from="1481044624292" duration="94000" />
+      <workItem from="1481044624292" duration="138000" />
     </task>
     <task id="LOCAL-00001" summary="First initialization">
       <created>1481040310272</created>
@@ -254,11 +245,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481043188762</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Test12f">
+      <created>1481044725138</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1481044725138</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3430000" />
+    <option name="totallyTimeSpent" value="3474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
@@ -299,7 +297,8 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Test1" />
     <MESSAGE value="Test12" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test12" />
+    <MESSAGE value="Test12f" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test12f" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
