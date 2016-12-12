@@ -16,7 +16,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color:#efffef ">
 
 <div class="container" style="background-color: #eaeaff">
 
@@ -81,7 +81,7 @@
                     frameborder="0" style="border:0"
                     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUPcMFQBI6x3H5ouZen7cgm_9iSH_87CM
     &q=Space+Needle,Seattle+WA" allowfullscreen
-            " allowfullscreen>
+            >
             </iframe>
         </div>
         <div class="col-md-7" style="padding-left: 40px">
@@ -113,9 +113,34 @@
         <div class="col-md-8">
             <h3>Fill ticket details</h3>
             <div class="col-md-12">
-                <div class="col-md-2"><h4>From</h4></div>
-                <div class="col-md-6">
-                    <select class="btn btn-default" style="width:100%;margin-top:4px;">
+                <div class="col-md-4"><h4>Name</h4></div>
+                <div class="input-group col-md-7">
+                    <input class="form-control" type="text" id="name" placeholder="Your name" style="margin-top:4px;width: 100%"/>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>Email</h4></div>
+                <div class="input-group col-md-7">
+                    <input class="form-control" type="email" id="email" placeholder="Your email" style="margin-top:4px;width: 100%"/>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div>
+                    <div class="col-md-4">
+                        <h4>NIC</h4>
+                    </div>
+                    <div class="input-group col-md-4" style="float: left;margin-top:4px;">
+                        <input id="nic" type="text" class="form-control" name="nic" placeholder="Your NIC">
+                        <span class="input-group-addon">V</span>
+                    </div>
+                    <div id="nicCheck" class="col-md-3" style="color: red;"></div>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>From</h4></div>
+                <div class="input-group col-md-6">
+                    <select class="btn btn-default form-control" style="width:100%;margin-top:4px;">
                         <option value="Galle">Galle</option>
                         <option value="Ambalangoda" selected>Ambalangoda</option>
                         <option value="Aluthgama">Aluthgama</option>
@@ -126,9 +151,9 @@
                 </div>
             </div>
             <div class="col-md-12">
-                <div class="col-md-2"><h4>To</h4></div>
-                <div class="col-md-6">
-                    <select class="btn btn-default" style="width:100%;margin-top: 4px;">
+                <div class="col-md-4"><h4>To</h4></div>
+                <div class="input-group col-md-6">
+                    <select class="btn btn-default form-control" style="width:100%;margin-top: 4px;">
                         <option value="Galle">Galle</option>
                         <option value="Ambalangoda">Ambalangoda</option>
                         <option value="Aluthgama">Aluthgama</option>
@@ -137,11 +162,87 @@
                         <option value="Colombo" selected>Colombo </option>
                     </select>
                 </div>
-                <div class="col-md-2"></div>
+
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>Number of Tickets</h4></div>
+                <div class="input-group col-md-2">
+                    <select id="ticketCount" class="btn btn-default form-control" style="width:100%;margin-top: 4px;" onchange="ticketNoSelect()">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6" >6 </option>
+                        <option value="7" >7 </option>
+                        <option value="8" >8 </option>
+                        <option value="9" >9 </option>
+                        <option value="6" >10 </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>Children under 12</h4></div>
+                <div class="input-group col-md-2">
+                    <select id="ticketCountChildren" class="btn btn-default form-control" style="width:100%;margin-top: 4px;">
+                        <option value="1" selected>1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>Select Seat Numbers</h4></div>
+                <div class="input-group col-md-2" style="float:left">
+                    <select id="availableSeats" class="btn btn-default form-control" style="width:100%;margin-top: 4px;">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6" >6 </option>
+                        <option value="7" >7 </option>
+                        <option value="8" >8 </option>
+                        <option value="9" >9 </option>
+                        <option value="6" >10 </option>
+                    </select>
+                </div>
+                <div class="col-md-1"><input type="button" class="btn btn-danger" value="Select" style="margin-top: 4px" onclick="selectSeat()"/> </div>
+                <div style="clear: both"></div>
+            </div>
+            <div class="col-md-12" style="border-style: solid;border-width: 2px;margin: 20px;margin-top: 4px;margin-bottom: 4px;padding: 0px">
+                <div class="col-md-12" style="padding: 0px;margin: 0px;border-bottom-style: solid;border-bottom-width: 2px;"><h5>&nbsp;Selected Seats.(If want to remove a selected one, click on it)</h5></div>
+                <div id="seatHolder" class="col-md-12" style="height: 100px;padding-left: 20px;padding-top:10px;">
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>Journy distance</h4></div>
+                <div class="input-group col-md-3">
+                    <h4 id="distance">87 Km</h4>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>Adult price</h4></div>
+                <div class="input-group col-md-3">
+                    <h4 id="ticketPrice">Rs. 110.00</h4>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4"><h4>Total Cost</h4></div>
+                <div class="input-group col-md-3">
+                    <h4 id="total">Rs. 110.00</h4>
+                </div>
+            </div>
+
+            <div style="text-align: right">
+                <input class="btn btn-danger" type="submit" value="Confirm"/>
             </div>
         </div>
     </div>
     </form>
+    <br>
+    <br>
+    <br>
 </div>
+<script type="text/javascript" src="../JS/BookTicket.js"></script>
 </body>
 </html>
